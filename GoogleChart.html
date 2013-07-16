@@ -16,21 +16,22 @@
       function drawChart() {
 
         // Create the data table.
+        // -VZ edit- Went with gaming in June by genres
         var data = new google.visualization.DataTable();
-        data.addColumn('string', 'Topping');
-        data.addColumn('number', 'Slices');
+        data.addColumn('string', 'Genre');
+        data.addColumn('number', 'Hours');
         data.addRows([
-          ['Mushrooms', 3],
-          ['Onions', 1],
-          ['Olives', 1],
-          ['Zucchini', 1],
-          ['Pepperoni', 2]
+          ['RTS', 8], //  Motor World Mobile 
+          ['1PS', 1], //  Bioshock Infinite
+          ['Sports', 8], // NCAA14
+          ['3PS', 15],  // Last of Us, pretty sure I spent more than 15 hrs
+          ['Card-Puzzle', 4] // HellFire, surprisingly took a long time with this one
         ]);
 
         // Set chart options
-        var options = {'title':'How Much Pizza I Ate Last Night',
-                       'width':400,
-                       'height':300};
+        var options = {'title':'June: Hours spent gaming by Genre', // Doubled the original Quick Start Example
+                       'width':800,
+                       'height':600};
 
         // Instantiate and draw our chart, passing in some options.
         var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
